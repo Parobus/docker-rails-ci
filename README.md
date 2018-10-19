@@ -20,7 +20,18 @@ and npm packages are installed:
 
 ## Usage
 ```
-docker run -d heathrow/rails-ci:latest
+docker run -d parobus/rails-ci:latest
 ```
 
-[https://github.com/docker-library/ruby](https://github.com/docker-library/ruby)
+## Updating
+
+This image is based off the [https://github.com/docker-library/ruby](base ruby image)
+when that has the lastest ruby you can upgrade the CI stack. Copy over the most recent
+folder to your target version, e.g. `cp -r 2.5.0 2.5.3` and edit the base Ruby image
+in the `Dockerfile`, then:
+
+1 - `docker build <target>/Dockerfile`
+2 - `docker tag <resulting image> parobus/rails-ci:<target>`
+3 - `docker push parabus/rails-ci:<target>`
+
+Note you will need to be logged in as some with DockerHub priviledges.
