@@ -9,12 +9,13 @@ A few packages are installed:
 - sqlite3
 - nodejs
 - yarn (via npm)
-- phantomjs (via npm)
 - imagemagick
 - mecab
 - libmecab-dev
 - mecab-ipadic-utf8
 - unzip
+- google-chrome-stable
+- chromedriver
 
 and npm packages are installed:
 
@@ -35,3 +36,9 @@ in the `Dockerfile`, then:
 3 - `docker push parabus/rails-ci:<target>`
 
 Note you will need to be logged in as some with DockerHub priviledges.
+
+### Updating Chrome
+
+You will need to update chrome-driver from time to time when Chrome is updated.
+
+Get the latest version from https://sites.google.com/a/chromium.org/chromedriver/downloads
